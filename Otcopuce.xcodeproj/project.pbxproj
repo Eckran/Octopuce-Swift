@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0920F920A100AC004D1AEE /* OctopuceData.json in Resources */ = {isa = PBXBuildFile; fileRef = FE0920F820A100AC004D1AEE /* OctopuceData.json */; };
+		FE6FB2DF20AB2E1E00771CF8 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FB2DE20AB2E1E00771CF8 /* ContactTableViewCell.swift */; };
+		FE6FB2E320AB2F9000771CF8 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FB2E220AB2F9000771CF8 /* ContactViewController.swift */; };
+		FE6FB2E520AC7D7C00771CF8 /* RappelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FB2E420AC7D7C00771CF8 /* RappelViewController.swift */; };
 		FECFBA552097ABED0063D232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFBA542097ABED0063D232 /* AppDelegate.swift */; };
 		FECFBA572097ABED0063D232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFBA562097ABED0063D232 /* ViewController.swift */; };
 		FECFBA5A2097ABED0063D232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECFBA582097ABED0063D232 /* Main.storyboard */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE0920F820A100AC004D1AEE /* OctopuceData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OctopuceData.json; sourceTree = "<group>"; };
+		FE6FB2DE20AB2E1E00771CF8 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		FE6FB2E220AB2F9000771CF8 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		FE6FB2E420AC7D7C00771CF8 /* RappelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappelViewController.swift; sourceTree = "<group>"; };
 		FECFBA512097ABED0063D232 /* Otcopuce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otcopuce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECFBA542097ABED0063D232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FECFBA562097ABED0063D232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,7 @@
 		FECFBA532097ABED0063D232 /* Otcopuce */ = {
 			isa = PBXGroup;
 			children = (
+				FE0920F820A100AC004D1AEE /* OctopuceData.json */,
 				FECFBA542097ABED0063D232 /* AppDelegate.swift */,
 				FECFBA562097ABED0063D232 /* ViewController.swift */,
 				FECFBA582097ABED0063D232 /* Main.storyboard */,
@@ -69,6 +78,9 @@
 				FECFBA6A2098BD5D0063D232 /* AddOrdonanceVC.swift */,
 				FECFBA6C2098FA700063D232 /* OrdonnanceVC.swift */,
 				FEDE0BEF20A07AAB00F2864B /* Ordonnance.swift */,
+				FE6FB2DE20AB2E1E00771CF8 /* ContactTableViewCell.swift */,
+				FE6FB2E220AB2F9000771CF8 /* ContactViewController.swift */,
+				FE6FB2E420AC7D7C00771CF8 /* RappelViewController.swift */,
 			);
 			path = Otcopuce;
 			sourceTree = "<group>";
@@ -132,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FECFBA5F2097ABEE0063D232 /* LaunchScreen.storyboard in Resources */,
+				FE0920F920A100AC004D1AEE /* OctopuceData.json in Resources */,
 				FECFBA5C2097ABEE0063D232 /* Assets.xcassets in Resources */,
 				FECFBA5A2097ABED0063D232 /* Main.storyboard in Resources */,
 			);
@@ -144,6 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6FB2E520AC7D7C00771CF8 /* RappelViewController.swift in Sources */,
+				FE6FB2DF20AB2E1E00771CF8 /* ContactTableViewCell.swift in Sources */,
+				FE6FB2E320AB2F9000771CF8 /* ContactViewController.swift in Sources */,
 				FEDE0BF020A07AAC00F2864B /* Ordonnance.swift in Sources */,
 				FECFBA572097ABED0063D232 /* ViewController.swift in Sources */,
 				FECFBA6D2098FA700063D232 /* OrdonnanceVC.swift in Sources */,
@@ -295,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJ33A5Y9L7;
 				INFOPLIST_FILE = Otcopuce/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJ33A5Y9L7;
 				INFOPLIST_FILE = Otcopuce/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

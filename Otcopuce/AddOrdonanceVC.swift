@@ -13,6 +13,7 @@ UITextFieldDelegate
     @IBOutlet weak var doctorName: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var photoPicked: UIImageView!
+    @IBOutlet weak var takePhotoButton: UIButton!
     
     var newMedia : Bool?
     var ordonnance : OrdoItem?
@@ -20,6 +21,8 @@ UITextFieldDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.doctorName.delegate = self
 
     }
 
@@ -37,14 +40,23 @@ UITextFieldDelegate
         dateFormatter.dateFormat = "dd MMM yyyy"
         let selectedDate = dateFormatter.string(from: datePicker.date)
         
-        let mediaOrdo = image
+        //let mediaOrdo = image
         
-        print(dName ?? " ")
+        do {
+            let OrdoAdd : [String: Any] = [ "docteur": dName, "date": selectedDate, ]
+        let jsonData = try JSONSerialization.data(withJSONObject: OrdoAdd, options: [])
+        let jsonString = String(data: jsonData, encoding: String.Encoding.ascii)!
+        print (jsonString)
+        } catch {
+            print("error json")
+        }
+        
+        /*print(dName ?? " ")
         print(selectedDate)
-        print(mediaOrdo ?? " ")
+        print(mediaOrdo ?? " ")*/
     }
-    
-    @IBAction func openCamera(_ sender: Any) {
+
+    @IBAction func OpenCamera(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -73,4 +85,32 @@ UITextFieldDelegate
         self.dismiss(animated: true, completion: nil)
     }
     
+    //Hide keyboard touching outside keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //Hide keyboard pressing return
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        doctorName.resignFirstResponder()
+        return true
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
