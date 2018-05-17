@@ -39,22 +39,19 @@ UITextFieldDelegate
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
         let selectedDate = dateFormatter.string(from: datePicker.date)
-        
         //let mediaOrdo = image
         
-        do {
-            let OrdoAdd : [String: Any] = [ "docteur": dName, "date": selectedDate, ]
-        let jsonData = try JSONSerialization.data(withJSONObject: OrdoAdd, options: [])
-        let jsonString = String(data: jsonData, encoding: String.Encoding.ascii)!
-        print (jsonString)
-        } catch {
-            print("error json")
-        }
+        let ordo = OrdoItem(doctor: dName!, date: selectedDate)
         
-        /*print(dName ?? " ")
-        print(selectedDate)
-        print(mediaOrdo ?? " ")*/
+        let encoder = JSONEncoder()
+        let data = try? encoder.encode([ordo])
+        let OrdoString = String(data: data!, encoding: String.Encoding.utf8)!
+        print (OrdoString)
+        
+        //recu l'url d'enregistrement
+        
     }
+       
 
     @IBAction func OpenCamera(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -364,14 +365,63 @@ Ces données recueillies ne nous permettent pas de vous identifier et vous pouve
                     <view key="view" contentMode="scaleToFill" id="IV0-1s-cTJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Z1-X5-WEU">
+                                <rect key="frame" x="5" y="64" width="365" height="128"/>
+                                <color key="backgroundColor" red="0.9610168147" green="0.9610168147" blue="0.9610168147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="gyr-1f-nZX"/>
+                                </constraints>
+                                <string key="text">À PROPOS DE NOTRE LABORATOIRE ET DE L’APPLICATION.
+
+Laboratoire des Système Scientifiques et Numérique a réalisé ce service en partenariat avec la Fondation pour la recherche Médical.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partenaire" translatesAutoresizingMaskIntoConstraints="NO" id="gtc-UO-gyk">
+                                <rect key="frame" x="16" y="223" width="125" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="7jT-t4-u7Q"/>
+                                    <constraint firstAttribute="height" constant="128" id="l79-IT-e9h"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GJb-Ws-dXA">
+                                <rect key="frame" x="5" y="382" width="365" height="222"/>
+                                <string key="text">Pour en savoir plus sur la Fondation pour la Recherche Médicale ou connaitre l’association la plus proche de chez vous, veuillez consulter leur site internet : https://www.frm.org/
+
+Pour en savoir plus sur notre Laboratoire (LSSN) ou connaitre le Laboratoire le plus proche de chez vous, veuillez consulter notre site internet : http://www.octopuce-lssn.com/
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lssn" translatesAutoresizingMaskIntoConstraints="NO" id="4hb-Gh-pZc">
+                                <rect key="frame" x="171" y="223" width="188" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9610168147" green="0.9610168147" blue="0.9610168147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sXA-Rc-4QN" firstAttribute="bottom" secondItem="GJb-Ws-dXA" secondAttribute="bottom" constant="14" id="1Wd-VD-b1e"/>
+                            <constraint firstItem="4hb-Gh-pZc" firstAttribute="leading" secondItem="gtc-UO-gyk" secondAttribute="trailing" constant="30" id="KdK-CG-c0k"/>
+                            <constraint firstItem="gtc-UO-gyk" firstAttribute="top" secondItem="4hb-Gh-pZc" secondAttribute="top" id="RG2-ey-uhN"/>
+                            <constraint firstItem="7Z1-X5-WEU" firstAttribute="leading" secondItem="sXA-Rc-4QN" secondAttribute="leading" constant="5" id="SJV-nc-T0y"/>
+                            <constraint firstItem="gtc-UO-gyk" firstAttribute="top" secondItem="7Z1-X5-WEU" secondAttribute="bottom" constant="31" id="SMI-y2-7JX"/>
+                            <constraint firstItem="gtc-UO-gyk" firstAttribute="bottom" secondItem="4hb-Gh-pZc" secondAttribute="bottom" id="TX5-ma-gCf"/>
+                            <constraint firstItem="4hb-Gh-pZc" firstAttribute="trailing" secondItem="IV0-1s-cTJ" secondAttribute="trailingMargin" id="a4Q-d0-fDy"/>
+                            <constraint firstItem="gtc-UO-gyk" firstAttribute="leading" secondItem="IV0-1s-cTJ" secondAttribute="leadingMargin" id="f4I-Y2-cZC"/>
+                            <constraint firstItem="7Z1-X5-WEU" firstAttribute="top" secondItem="sXA-Rc-4QN" secondAttribute="top" id="gsz-N5-9Ke"/>
+                            <constraint firstItem="GJb-Ws-dXA" firstAttribute="leading" secondItem="sXA-Rc-4QN" secondAttribute="leading" constant="5" id="jlZ-GQ-Qas"/>
+                            <constraint firstItem="GJb-Ws-dXA" firstAttribute="top" secondItem="gtc-UO-gyk" secondAttribute="bottom" constant="31" id="tUZ-2R-bu4"/>
+                            <constraint firstItem="sXA-Rc-4QN" firstAttribute="trailing" secondItem="7Z1-X5-WEU" secondAttribute="trailing" constant="5" id="xDd-Bs-aS9"/>
+                            <constraint firstItem="sXA-Rc-4QN" firstAttribute="trailing" secondItem="GJb-Ws-dXA" secondAttribute="trailing" constant="5" id="zq5-u9-YQt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sXA-Rc-4QN"/>
                     </view>
                     <navigationItem key="navigationItem" title="À propos" id="emF-MJ-vfX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0K-2H-tsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="1959"/>
+            <point key="canvasLocation" x="1072.8" y="1958.7706146926539"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bNo-sH-qPH">
@@ -1239,7 +1289,9 @@ Ces données recueillies ne nous permettent pas de vous identifier et vous pouve
         <image name="calendar" width="848" height="829"/>
         <image name="cog" width="848" height="829"/>
         <image name="hearth" width="848" height="829"/>
+        <image name="lssn" width="444" height="280"/>
         <image name="ordonance" width="848" height="829"/>
+        <image name="partenaire" width="500" height="596"/>
         <image name="phone" width="848" height="829"/>
         <image name="rappel" width="848" height="829"/>
         <image name="smenu2" width="2709" height="634"/>

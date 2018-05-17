@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OrdoItem {
+struct OrdoItem: Codable {
     var doctor : String
     var date : String
 }
