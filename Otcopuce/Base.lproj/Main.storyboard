@@ -1199,17 +1199,17 @@ Pour en savoir plus sur notre Laboratoire (LSSN) ou connaitre le Laboratoire le 
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaX-Ij-NZy">
-                                <rect key="frame" x="129.5" y="309.5" width="116" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXW-Fh-oL7">
+                                <rect key="frame" x="113" y="302" width="149.5" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BaX-Ij-NZy" firstAttribute="centerX" secondItem="IzI-t5-ctX" secondAttribute="centerX" id="bWk-iZ-fCL"/>
-                            <constraint firstItem="BaX-Ij-NZy" firstAttribute="centerY" secondItem="IzI-t5-ctX" secondAttribute="centerY" id="nwR-gl-oHk"/>
+                            <constraint firstItem="OXW-Fh-oL7" firstAttribute="centerX" secondItem="IzI-t5-ctX" secondAttribute="centerX" id="ILO-na-ywR"/>
+                            <constraint firstItem="OXW-Fh-oL7" firstAttribute="centerY" secondItem="IzI-t5-ctX" secondAttribute="centerY" id="o3A-ev-Pp2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r0r-0f-rXn"/>
                     </view>

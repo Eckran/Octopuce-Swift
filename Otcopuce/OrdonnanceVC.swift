@@ -10,7 +10,6 @@ class OrdonnanceVC: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +23,7 @@ class OrdonnanceVC: UIViewController {
             if let dest = segue.destination as? UINavigationController,
                 let ordoDetails = dest.viewControllers.first as? AddOrdonanceVC {
                 ordoDetails.ordoManager = ordoManager
+                ordoDetails.listController = self
             }
         }
     }

@@ -20,6 +20,7 @@ UITextFieldDelegate
     var image : UIImage?
     
     var ordoManager: OrdoManager!
+    weak var listController: OrdonnanceVC!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,7 @@ UITextFieldDelegate
         let ordo = OrdoItem(doctor: dName!, date: selectedDate)
         
         ordoManager.add(ordo)
+        listController.tableView.reloadData()
         
         dismiss(animated: true, completion: nil)
     }

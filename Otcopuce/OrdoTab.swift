@@ -21,7 +21,6 @@ class OrdoManager {
         
         let encoder = JSONEncoder()
         let data = try? encoder.encode(ordonnances)
-        let OrdoString = String(data: data!, encoding: String.Encoding.utf8)!
         
         try? data?.write(to: archiveURL)
     }

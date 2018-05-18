@@ -21,11 +21,11 @@ class ContactViewController: UIViewController {
 extension ContactViewController: UITableViewDataSource {
     
     func numberOfSections(in ContactTable: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ ContactTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
     
     func tableView(_ ContactTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
