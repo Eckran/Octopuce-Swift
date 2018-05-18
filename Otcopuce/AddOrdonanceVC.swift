@@ -19,11 +19,16 @@ UITextFieldDelegate
     var ordonnance : OrdoItem?
     var image : UIImage?
     
+    var ordoManager: OrdoManager!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard ordoManager != nil else {
+            fatalError("No passed ordoManager")
+        }
+        
         self.doctorName.delegate = self
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +38,7 @@ UITextFieldDelegate
     
     @IBAction func SaveOrdo(_ sender: Any) {
         
+
         let dName = doctorName.text
 
         datePicker.datePickerMode = UIDatePickerMode.date
@@ -43,13 +49,9 @@ UITextFieldDelegate
         
         let ordo = OrdoItem(doctor: dName!, date: selectedDate)
         
-        let encoder = JSONEncoder()
-        let data = try? encoder.encode([ordo])
-        let OrdoString = String(data: data!, encoding: String.Encoding.utf8)!
-        print (OrdoString)
+        ordoManager.add(ordo)
         
-        //recu l'url d'enregistrement
-        
+        dismiss(animated: true, completion: nil)
     }
        
 

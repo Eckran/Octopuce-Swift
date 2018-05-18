@@ -2,9 +2,7 @@ import UIKit
 
 class OrdonnanceVC: UIViewController {
     
-    var ordonances = [OrdoItem(doctor: "Pierre", date: "12 Fevrier"),
-                      OrdoItem(doctor: "Bertrand", date: "15 Fevrier")
-                      ]
+    let ordoManager = OrdoManager()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -12,6 +10,7 @@ class OrdonnanceVC: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -19,7 +18,15 @@ class OrdonnanceVC: UIViewController {
         // Dispose of any resources that can be recreated.
     
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addOrdo" {
+            if let dest = segue.destination as? UINavigationController,
+                let ordoDetails = dest.viewControllers.first as? AddOrdonanceVC {
+                ordoDetails.ordoManager = ordoManager
+            }
+        }
+    }
 }
 
 extension OrdonnanceVC: UITableViewDataSource {
@@ -29,7 +36,7 @@ extension OrdonnanceVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ordonances.count
+        return ordoManager.ordonnances.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,7 +44,7 @@ extension OrdonnanceVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrdoCell", for: indexPath)
         
         //Customize the cell
-        let ordonnance = ordonances[indexPath.row]
+        let ordonnance = ordoManager.ordonnances[indexPath.row]
         cell.textLabel?.text = ordonnance.doctor
         cell.detailTextLabel?.text = ordonnance.date
         
