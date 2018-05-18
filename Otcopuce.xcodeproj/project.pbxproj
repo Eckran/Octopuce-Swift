@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B198E4E20ADD757008334BA /* ConseilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B198E4D20ADD757008334BA /* ConseilsViewController.swift */; };
+		8B66F3C020AEBD8200B383FB /* Conseils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B66F3BF20AEBD8200B383FB /* Conseils.swift */; };
+		8B66F3C220AEDC9500B383FB /* DetailConseilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B66F3C120AEDC9500B383FB /* DetailConseilsViewController.swift */; };
+		8B66F3C420AEDF1000B383FB /* DetailsConseils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B66F3C320AEDF1000B383FB /* DetailsConseils.swift */; };
 		FE0920F920A100AC004D1AEE /* OctopuceData.json in Resources */ = {isa = PBXBuildFile; fileRef = FE0920F820A100AC004D1AEE /* OctopuceData.json */; };
 		FE6FB2DF20AB2E1E00771CF8 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FB2DE20AB2E1E00771CF8 /* ContactTableViewCell.swift */; };
 		FE6FB2E320AB2F9000771CF8 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FB2E220AB2F9000771CF8 /* ContactViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B198E4D20ADD757008334BA /* ConseilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConseilsViewController.swift; sourceTree = "<group>"; };
+		8B66F3BF20AEBD8200B383FB /* Conseils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conseils.swift; sourceTree = "<group>"; };
+		8B66F3C120AEDC9500B383FB /* DetailConseilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConseilsViewController.swift; sourceTree = "<group>"; };
+		8B66F3C320AEDF1000B383FB /* DetailsConseils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsConseils.swift; sourceTree = "<group>"; };
 		FE0920F820A100AC004D1AEE /* OctopuceData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OctopuceData.json; sourceTree = "<group>"; };
 		FE6FB2DE20AB2E1E00771CF8 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		FE6FB2E220AB2F9000771CF8 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +89,10 @@
 				FE6FB2DE20AB2E1E00771CF8 /* ContactTableViewCell.swift */,
 				FE6FB2E220AB2F9000771CF8 /* ContactViewController.swift */,
 				FE6FB2E420AC7D7C00771CF8 /* RappelViewController.swift */,
+				8B66F3BF20AEBD8200B383FB /* Conseils.swift */,
+				8B198E4D20ADD757008334BA /* ConseilsViewController.swift */,
+				8B66F3C320AEDF1000B383FB /* DetailsConseils.swift */,
+				8B66F3C120AEDC9500B383FB /* DetailConseilsViewController.swift */,
 			);
 			path = Otcopuce;
 			sourceTree = "<group>";
@@ -159,10 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6FB2E520AC7D7C00771CF8 /* RappelViewController.swift in Sources */,
+				8B66F3C420AEDF1000B383FB /* DetailsConseils.swift in Sources */,
+				8B66F3C020AEBD8200B383FB /* Conseils.swift in Sources */,
+				8B198E4E20ADD757008334BA /* ConseilsViewController.swift in Sources */,
 				FE6FB2DF20AB2E1E00771CF8 /* ContactTableViewCell.swift in Sources */,
 				FE6FB2E320AB2F9000771CF8 /* ContactViewController.swift in Sources */,
 				FEDE0BF020A07AAC00F2864B /* Ordonnance.swift in Sources */,
 				FECFBA572097ABED0063D232 /* ViewController.swift in Sources */,
+				8B66F3C220AEDC9500B383FB /* DetailConseilsViewController.swift in Sources */,
 				FECFBA6D2098FA700063D232 /* OrdonnanceVC.swift in Sources */,
 				FECFBA552097ABED0063D232 /* AppDelegate.swift in Sources */,
 				FECFBA6B2098BD5D0063D232 /* AddOrdonanceVC.swift in Sources */,
