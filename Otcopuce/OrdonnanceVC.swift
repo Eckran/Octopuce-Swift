@@ -31,8 +31,6 @@ class OrdonnanceVC: UIViewController {
 
 extension OrdonnanceVC: UITableViewDataSource {
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ordoManager.ordonnances.count
     }

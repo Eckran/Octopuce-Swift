@@ -2,6 +2,8 @@ import UIKit
 
 class ContactViewController: UIViewController {
 
+    var contactManager = ContactManager()
+    
     @IBOutlet weak var ContactTable: UITableView!
     
     override func viewDidLoad() {
@@ -15,17 +17,23 @@ class ContactViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddContact" {
+            if let dest = segue.destination as? UINavigationController,
+                let ContactDetails = dest.viewControllers.first as? AddContactViewController {
+                ContactDetails.contactManager = contactManager
+                ContactDetails.cListController = self
+            }
+        }
+    }
 
 }
 
 extension ContactViewController: UITableViewDataSource {
     
-    func numberOfSections(in ContactTable: UITableView) -> Int {
-        return 2
-    }
-    
     func tableView(_ ContactTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return contactManager.contacts.count
     }
     
     func tableView(_ ContactTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,8 +41,9 @@ extension ContactViewController: UITableViewDataSource {
         let cell = ContactTable.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
         //Customize the cell
-        cell.textLabel?.text = "name"
-        cell.detailTextLabel?.text = "Nickname"
+        let contact = contactManager.contacts[indexPath.row]
+        cell.textLabel?.text = contact.name
+        cell.detailTextLabel?.text = contact.firstName
         
         return cell
     }
